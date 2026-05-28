@@ -6,7 +6,8 @@ import mdx from '@astrojs/mdx'
 import react from '@astrojs/react'
 
 export default defineConfig({
-  site: 'http://localhost:4321/',
+  site: process.env.URL || 'https://vinoth-akithon.github.io',
+  base: process.env.BASE_URL || '/3dstructures/',
   integrations: [
     react(),
     mdx(),
