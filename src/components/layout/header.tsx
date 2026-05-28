@@ -14,8 +14,6 @@ import type { NavigationSection } from '@/components/blocks/menu-navigation'
 
 import { cn } from '@/lib/utils'
 
-import BistroLogo from '@/assets/svg/bistro-logo'
-
 // Inline active section hook
 const useActiveSection = (sectionIds: string[]) => {
   const [activeSection, setActiveSection] = useState<string>('')
@@ -88,46 +86,58 @@ const Header = ({ navigationData, className }: HeaderProps) => {
   return (
     <header
       className={cn(
-        'fixed top-0 z-50 h-16 w-full border-b transition-all duration-300',
-        {
-          'bg-background shadow-md': isScrolled
-        },
+        'border-border dark:bg-background fixed top-0 z-50 h-16 w-full border-b bg-white transition-all duration-500',
+        'animate-in slide-in-from-top-4 fade-in fill-mode-both duration-500',
+        isScrolled ? 'shadow-sm' : '',
         className
       )}
     >
       <div className='mx-auto flex h-full max-w-7xl items-center justify-between gap-6 px-4 sm:px-6 lg:px-8'>
         {/* Logo */}
-        <a href='/#home' className='flex items-center gap-3'>
-          <BistroLogo />
-          <span className='text-primary text-[20px] font-semibold'>Bistro</span>
+        <a
+          href='/#home'
+          className='animate-in slide-in-from-left-6 fade-in fill-mode-both flex shrink-0 items-center delay-100 duration-500'
+        >
+          <img
+            src='/images/site-logo.jpeg'
+            alt='3D Structures'
+            className='h-10 w-auto object-contain dark:rounded-md dark:bg-white dark:p-1'
+          />
         </a>
 
         {/* Navigation */}
         <MenuNavigation
           navigationData={navigationData}
           activeSection={activeSection}
-          className='**:data-[slot=navigation-menu-list]:gap-1 max-lg:hidden'
+          className='animate-in fade-in fill-mode-both delay-200 duration-700 **:data-[slot=navigation-menu-list]:gap-1 max-lg:hidden'
         />
 
         {/* Actions */}
-        <div className='flex items-center'>
+        <div className='animate-in slide-in-from-right-6 fade-in fill-mode-both flex items-center delay-100 duration-500'>
           <ThemeToggle />
           <Button
-            className='group relative ml-4 w-fit overflow-hidden rounded-full text-base before:absolute before:inset-0 before:rounded-[inherit] before:bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.5)_50%,transparent_75%,transparent_100%)] before:bg-[length:250%_250%,100%_100%] before:bg-[position:200%_0,0_0] before:bg-no-repeat before:transition-[background-position_0s_ease] before:duration-1000 hover:before:bg-[position:-100%_0,0_0] has-[>svg]:px-6 max-sm:hidden dark:before:bg-[linear-gradient(45deg,transparent_25%,rgba(0,0,0,0.2)_50%,transparent_75%,transparent_100%)]'
+            variant='secondary'
+            className='group relative ml-4 w-fit overflow-hidden rounded-lg text-base has-[>svg]:px-6 max-sm:hidden'
             asChild
           >
-            <a href='#contact-us'>Book table</a>
+            <a href='#contact'>
+              <span
+                className='pointer-events-none absolute inset-0 w-1/3 bg-[linear-gradient(120deg,transparent_0%,rgba(255,255,255,0.45)_50%,transparent_100%)]'
+                style={{ animation: 'shimmer-sweep 3s ease-in-out infinite' }}
+              />
+              Partner With Us
+            </a>
           </Button>
 
-          {/* Mobile book table button */}
+          {/* Mobile get a quote button */}
           <TooltipProvider>
             <Tooltip>
               <TooltipTrigger asChild>
-                <Button className='ml-4 rounded-full sm:hidden' asChild>
-                  <a href='#contact-us'>Book table</a>
+                <Button variant='secondary' className='ml-4 rounded-lg sm:hidden' asChild>
+                  <a href='#contact'>Partner With Us</a>
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Book table</TooltipContent>
+              <TooltipContent>Partner With Us</TooltipContent>
             </Tooltip>
           </TooltipProvider>
 
@@ -137,7 +147,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
             navigationData={navigationData}
             activeSection={activeSection}
             trigger={
-              <Button variant='outline' size='icon' className='ml-3 rounded-full lg:hidden'>
+              <Button variant='outline' size='icon' className='ml-3 rounded-lg lg:hidden'>
                 <MenuIcon />
                 <span className='sr-only'>Menu</span>
               </Button>

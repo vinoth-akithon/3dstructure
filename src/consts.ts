@@ -1,40 +1,34 @@
 // Site Configuration
 // Centralized configuration for site metadata, SEO, and branding
 
-export const SITE_TITLE = 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio'
+export const SITE_TITLE = '3D Structures | Steel Detailing Services Australia'
 export const SITE_DESCRIPTION =
-  'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.'
+  'Professional steel detailing services across Australia. 3D Structures delivers precise shop drawings, BIM modelling, and connection design for structural engineers, builders, and fabricators.'
 
-export const GITHUB_URL = 'https://github.com/yourusername/shadcn-astro-bistro-landing-page'
-export const SITE_URL = 'https://shadcnstudio.com/'
+export const GITHUB_URL = ''
+export const SITE_URL = 'https://3dstructures.com.au/'
 
 export const SITE_METADATA = {
   title: {
-    default: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio'
+    default: '3D Structures | Steel Detailing Services Australia'
   },
   description:
-    'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
+    'Professional steel detailing services across Australia. 3D Structures delivers precise shop drawings, BIM modelling, and connection design for structural engineers, builders, and fabricators.',
   keywords: [
-    'Astro',
-    'astro template',
-    'astro theme',
-    'astro starter',
-    'shadcn template',
-    'shadcn ui',
-    'shadcn/ui components',
-    'tailwind template',
-    'tailwind css',
-    'react components',
-    'SEO optimized',
-    'web development',
-    'static site generator',
-    'modern web apps',
-    'performance',
-    'typescript'
+    'steel detailing',
+    'steel detailing Australia',
+    '3D structural modelling',
+    'shop drawings',
+    'BIM modelling',
+    'connection design',
+    'structural steel',
+    'fabrication drawings',
+    'steel fabricator',
+    'structural engineering Australia'
   ],
-  authors: [{ name: 'shadcn Studio', url: SITE_URL }],
-  creator: 'shadcn Studio',
-  publisher: 'shadcn Studio',
+  authors: [{ name: '3D Structures', url: SITE_URL }],
+  creator: '3D Structures',
+  publisher: '3D Structures',
   robots: {
     index: true,
     follow: true
@@ -54,28 +48,28 @@ export const SITE_METADATA = {
   },
   openGraph: {
     type: 'website',
-    locale: 'en_US',
-    siteName: 'Bistro',
-    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
+    locale: 'en_AU',
+    siteName: '3D Structures',
+    title: '3D Structures | Steel Detailing Services Australia',
     description:
-      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
+      'Professional steel detailing services across Australia. 3D Structures delivers precise shop drawings, BIM modelling, and connection design for structural engineers, builders, and fabricators.',
     images: [
       {
         url: '/images/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
+        alt: '3D Structures — Steel Detailing Services Australia',
         type: 'image/png'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@shadcnstudio',
-    creator: '@shadcnstudio',
-    title: 'Demo: Bistro - Restaurant Landing Page | Shadcn Studio',
+    site: '@3dstructures',
+    creator: '@3dstructures',
+    title: '3D Structures | Steel Detailing Services Australia',
     description:
-      'Enjoy fresh ingredients, thoughtfully prepared meals, and a welcoming space designed for memorable moments. Experience bistro dining made simple and delicious.',
+      'Professional steel detailing services across Australia. 3D Structures delivers precise shop drawings, BIM modelling, and connection design for structural engineers, builders, and fabricators.',
     images: ['/images/og-image.png']
   },
   verification: {
@@ -95,22 +89,22 @@ export const SOCIAL_LINKS = {
 
 // Company information for structured data
 export const COMPANY_INFO = {
-  name: 'shadcn Studio',
-  legalName: 'shadcn Studio Inc.',
+  name: '3D Structures',
+  legalName: '3D Structures Pty Ltd',
   url: SITE_URL,
   logo: `/images/site-logo.png`,
-  foundingDate: '2024',
+  foundingDate: '2010',
   address: {
-    streetAddress: '123 Web Dev Street',
-    addressLocality: 'San Francisco',
-    addressRegion: 'CA',
-    postalCode: '94102',
-    addressCountry: 'US'
+    streetAddress: '',
+    addressLocality: '',
+    addressRegion: '',
+    postalCode: '',
+    addressCountry: 'AU'
   },
   contactPoint: {
-    telephone: '+1-555-123-4567',
+    telephone: '',
     contactType: 'customer support',
-    email: 'support@shadcnstudio.com'
+    email: ''
   },
   sameAs: Object.values(SOCIAL_LINKS)
 }

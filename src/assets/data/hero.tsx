@@ -1,37 +1,41 @@
-export const menudata = [
+import type { HeroSlide } from '@/components/blocks/hero-section/hero-section'
+
+// TODO: Replace placeholder images with actual 3D Structures project photos
+export const heroSlides: HeroSlide[] = [
   {
     id: 1,
-    img: '/images/hero-section/dish-01.webp',
-    imgAlt: 'plate-1',
-    userComment: 'The ambiance is perfect and the food is absolutely delicious. Highly recommended!',
-    userAvatar: '/images/hero-section/avatar-01.webp'
+    img: '/images/hero-section/project-01.jpg',
+    imgAlt: 'Multi-Storey Commercial Steel Frame',
+    clientQuote: 'Drawings were accurate from day one — their Tekla models saved us weeks of rework on site.',
+    clientName: 'Marcus T. — Steel Fabricator, Sydney'
   },
   {
     id: 2,
-    img: '/images/hero-section/dish-02.webp',
-    imgAlt: 'plate-2',
-    userComment: 'Best dining experience in town. The staff is friendly and the menu is exceptional.',
-    userAvatar: '/images/hero-section/avatar-02.webp'
+    img: '/images/hero-section/project-02.jpg',
+    imgAlt: 'Industrial Warehouse Steel Structure',
+    clientQuote: 'Turnaround was half what we expected and the clash-detection was flawless. Highly recommended.',
+    clientName: 'Sarah K. — Project Engineer, Melbourne'
   },
   {
     id: 3,
-    img: '/images/hero-section/dish-03.webp',
-    imgAlt: 'plate-3',
-    userComment: 'Every dish is crafted with care. This place never disappoints!',
-    userAvatar: '/images/hero-section/avatar-03.webp'
+    img: '/images/hero-section/project-03.jpg',
+    imgAlt: 'Bridge & Infrastructure Steelwork',
+    clientQuote:
+      'AS 4100 compliance was thorough and the connection details held up perfectly under independent review.',
+    clientName: 'James R. — Structural Consultant, Brisbane'
   },
   {
     id: 4,
-    img: '/images/hero-section/dish-04.webp',
-    imgAlt: 'plate-4',
-    userComment: 'Great atmosphere and incredible flavors. A must-visit restaurant!',
-    userAvatar: '/images/hero-section/avatar-04.webp'
+    img: '/images/hero-section/project-04.jpg',
+    imgAlt: 'Mining & Resources Structural Steel',
+    clientQuote: 'Their BIM coordination caught every clash before we hit the floor. Zero surprises during erection.',
+    clientName: 'Amy L. — EPC Contractor, Perth'
   },
   {
     id: 5,
-    img: '/images/hero-section/dish-05.webp',
-    imgAlt: 'plate-3',
-    userComment: 'Every dish is crafted with care. This place never disappoints!',
-    userAvatar: '/images/hero-section/avatar-03.webp'
+    img: '/images/hero-section/project-05.jpg',
+    imgAlt: 'High-Rise Mixed-Use Steel Frame',
+    clientQuote: 'Responsive, precise, and they genuinely understand the demands of a live construction programme.',
+    clientName: 'David N. — Head of Engineering, Adelaide'
   }
 ]
