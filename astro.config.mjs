@@ -7,7 +7,7 @@ import react from '@astrojs/react'
 
 export default defineConfig({
   site: process.env.URL || 'https://vinoth-akithon.github.io',
-  base: process.env.BASE_URL || '/3dstructures/',
+  base: process.env.BASE_URL || '/3dstructure/',
   integrations: [
     react(),
     mdx(),
