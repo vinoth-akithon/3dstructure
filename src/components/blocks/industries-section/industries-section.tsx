@@ -41,42 +41,42 @@ const industries = [
   {
     icon: FactoryIcon,
     title: 'Industrial Structures',
-    image: '/images/industries_serve/industrial.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/industrial.webp`,
     description:
       'Manufacturing plants, process facilities, and heavy industrial frameworks requiring precise structural coordination and multi-discipline clash resolution.'
   },
   {
     icon: Building2Icon,
     title: 'Commercial Buildings',
-    image: '/images/industries_serve/commercial_buildings.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/commercial_buildings.webp`,
     description:
       'Multi-storey office towers, retail complexes, and mixed-use developments demanding accurate, BIM-coordinated steelwork from concept through to fabrication.'
   },
   {
     icon: FlameIcon,
     title: 'Oil & Gas Facilities',
-    image: '/images/industries_serve/oil_and_gas.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/oil_and_gas.webp`,
     description:
       'Offshore platforms, refineries, and petrochemical plant structures with stringent code compliance and demanding geometric complexity.'
   },
   {
     icon: TrophyIcon,
     title: 'Stadiums',
-    image: '/images/industries_serve/stadium.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/stadium.webp`,
     description:
       'Large-span roof structures, grandstands, and cantilevered seating tiers where structural elegance and fabrication precision are equally critical.'
   },
   {
     icon: PackageIcon,
     title: 'Warehouses & Logistics',
-    image: '/images/industries_serve/warehouse.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/warehouse.webp`,
     description:
       'Large-span portal frames and distribution hub structures optimised for fast-track fabrication, minimal site interfaces, and rapid erection programmes.'
   },
   {
     icon: PaletteIcon,
     title: 'Miscellaneous & Architectural Steel',
-    image: '/images/industries_serve/miscellaneous_amfd_architectural_steel.webp',
+    image: `${import.meta.env.BASE_URL}images/industries_serve/miscellaneous_amfd_architectural_steel.webp`,
     description:
       'Feature staircases, façade framing, canopies, and bespoke architectural metalwork where precision detailing and design intent are equally critical.'
   }
@@ -133,11 +133,16 @@ const IndustriesSection = () => {
             inView ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
           )}
         >
-          <Carousel setApi={setApi} plugins={[plugin.current]} opts={{ loop: true, align: 'start' }} className='w-full bg-transparent'>
+          <Carousel
+            setApi={setApi}
+            plugins={[plugin.current]}
+            opts={{ loop: true, align: 'start' }}
+            className='w-full bg-transparent'
+          >
             <CarouselContent className='-ml-4'>
               {industries.map(({ icon: Icon, title, image, description }, index) => (
                 <CarouselItem key={title} className='basis-full pl-4 sm:basis-1/2 lg:basis-1/3'>
-                  <div className='group border-primary/15 hover:border-secondary/50 h-full overflow-hidden rounded-2xl border bg-[oklch(0.97_0.015_230)] dark:bg-card shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.38)]'>
+                  <div className='group border-primary/15 hover:border-secondary/50 dark:bg-card h-full overflow-hidden rounded-2xl border bg-[oklch(0.97_0.015_230)] shadow-[0_6px_24px_rgba(0,0,0,0.3)] transition-all duration-300 hover:shadow-[0_16px_48px_rgba(0,0,0,0.38)]'>
                     {/* Image */}
                     <div className='relative aspect-[16/9] overflow-hidden'>
                       <img
@@ -165,7 +170,6 @@ const IndustriesSection = () => {
                       <h3 className='text-foreground text-base leading-snug font-bold'>{title}</h3>
                       <p className='text-muted-foreground text-xs leading-relaxed'>{description}</p>
                     </div>
-
                   </div>
                 </CarouselItem>
               ))}

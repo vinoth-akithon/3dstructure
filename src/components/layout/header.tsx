@@ -99,7 +99,7 @@ const Header = ({ navigationData, className }: HeaderProps) => {
           className='animate-in slide-in-from-left-6 fade-in fill-mode-both flex shrink-0 items-center delay-100 duration-500'
         >
           <img
-            src='/images/site-logo.jpeg'
+            src={`${import.meta.env.BASE_URL}images/site-logo.jpeg`}
             alt='3D Structures'
             className='h-10 w-auto object-contain dark:rounded-md dark:bg-white dark:p-1'
           />

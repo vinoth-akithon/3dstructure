@@ -37,11 +37,11 @@ export const SITE_METADATA = {
   locale: 'en_US',
   icons: {
     icon: [
-      { url: '/favicon/favicon.ico', sizes: '48x48' },
-      { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/favicon/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' }
+      { url: `${import.meta.env.BASE_URL}favicon/favicon.ico`, sizes: '48x48' },
+      { url: `${import.meta.env.BASE_URL}favicon/favicon-32x32.png`, sizes: '32x32', type: 'image/png' },
+      { url: `${import.meta.env.BASE_URL}favicon/favicon-16x16.png`, sizes: '16x16', type: 'image/png' },
+      { url: `${import.meta.env.BASE_URL}favicon/android-chrome-192x192.png`, sizes: '192x192', type: 'image/png' },
+      { url: `${import.meta.env.BASE_URL}favicon/android-chrome-512x512.png`, sizes: '512x512', type: 'image/png' }
     ],
     apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
     shortcut: [{ url: '/favicon/favicon.ico' }]
@@ -90,9 +90,9 @@ export const SOCIAL_LINKS = {
 // Company information for structured data
 export const COMPANY_INFO = {
   name: '3D Structures',
-  legalName: '3D Structures Pty Ltd',
+  legalName: '3D Structure',
   url: SITE_URL,
-  logo: `/images/site-logo.png`,
+  logo: `${import.meta.env.BASE_URL}images/site-logo.png`,
   foundingDate: '2010',
   address: {
     streetAddress: '',

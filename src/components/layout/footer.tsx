@@ -23,7 +23,7 @@ const Footer = () => {
           <div className='flex flex-col gap-5 lg:col-span-1'>
             <a href='/#home' className='w-fit'>
               <img
-                src='/images/site-logo.jpeg'
+                src={`${import.meta.env.BASE_URL}images/site-logo.jpeg`}
                 alt='3D Structure'
                 className='h-10 w-auto rounded-md bg-white object-contain p-1'
               />
